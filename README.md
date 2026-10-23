@@ -1,58 +1,104 @@
 # SpendWise — Personal Expense Tracker & Analytics
 
-A Flask application for recording income and expenses, filtering transactions, viewing monthly/category charts, and exporting CSV reports.
+SpendWise is a Python-based web application that helps users record, organize, and analyze their personal income and expenses through a simple dashboard.
 
-## Stack
-Python, Flask, Flask-SQLAlchemy, SQLite by default, Pandas, Matplotlib, HTML/CSS. Optional MySQL schema included.
+## Features
 
-## Run in VS Code (Windows PowerShell)
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env
-python app.py
-```
-Open http://127.0.0.1:5000. The database is created automatically.
+- **Dashboard:** View income, expenses, net balance, and transaction count.
+- **Transaction management:** Add and delete income or expense records.
+- **Category filtering:** Filter transactions by category.
+- **Data visualization:** View expense analytics through charts.
+- **CSV export:** Export transaction data for further analysis.
+- **Database storage:** Store transactions using SQLite by default.
 
-If activation is blocked:
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-If `python` is not recognized but `py` works, use `py` instead of `python`.
+## Technology Stack
 
-## Folder structure
+- **Language:** Python
+- **Web framework:** Flask
+- **Database:** SQLite
+- **Data analysis:** Pandas
+- **Charts:** Matplotlib
+- **Frontend:** HTML and CSS
+- **ORM:** Flask-SQLAlchemy
+
+## Project Structure
+
 ```text
 personal-expense-tracker/
 ├── app.py
 ├── requirements.txt
-├── .env.example
-├── .gitignore
 ├── schema.sql
 ├── README.md
+├── .env.example
+├── .gitignore
 ├── sample_data/
 │   └── sample_transactions.csv
-├── static/style.css
+├── static/
+│   └── style.css
 └── templates/
     ├── base.html
     ├── dashboard.html
     └── add.html
 ```
 
-## GitHub
-Create an empty repository named `personal-expense-tracker`, then run:
-```powershell
-git init
-git add .
-git status
-git commit -m "Build personal expense tracker and analytics"
-git branch -M main
-git remote add origin https://github.com/geetaharinic/personal-expense-tracker.git
-git push -u origin main
-```
-Check `git status` before committing. Never commit `.env`, `.venv`, database files, or private financial data. Configure Git identity if needed with `git config --global user.name "Geeta Harini"` and `git config --global user.email "YOUR-GITHUB-EMAIL"`.
+## Getting Started
 
-## Notes
-Amounts are treated as INR (₹). The app has no authentication and is intended for local learning; do not expose it publicly with real personal financial records. It reports descriptive totals, not financial advice.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/geetaharinic/personal-expense-tracker.git
+cd personal-expense-tracker
+```
+
+### 2. Create a virtual environment
+
+**Windows:**
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Copy the example environment file:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+### 5. Run the application
+
+```bash
+python app.py
+```
+
+Open `http://127.0.0.1:5000` in your browser.
+
+## Learning Outcomes
+
+This project demonstrates practical use of Python, Flask routing, database operations, data analysis, chart generation, CSV export, and Git-based version control.
+
+## Future Improvements
+
+- Add user authentication and individual accounts.
+- Add monthly budgets and spending limits.
+- Add date-range analytics and reports.
+- Improve mobile responsiveness.
+- Deploy the application to a public hosting platform.
+
+## Author
+
+**Geeta Harini**
+
+- GitHub: [@geetaharinic](https://github.com/geetaharinic)
+
+---
+
+*Built as a learning project to practice Python web development and data analytics.*
