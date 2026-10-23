@@ -1,0 +1,8 @@
+date,type,category,description,amount,payment_method
+2026-10-01,income,Other,Monthly allowance,8000,UPI
+2026-10-02,expense,Food,Lunch,120,UPI
+2026-10-03,expense,Transport,Bus fare,60,Cash
+2026-10-04,expense,Education,Notebook and pens,240,UPI
+2026-10-05,expense,Food,Groceries,650,UPI
+2026-10-08,expense,Entertainment,Movie ticket,220,Card
+2026-10-10,income,Other,Freelance task,1500,Bank Transfer
