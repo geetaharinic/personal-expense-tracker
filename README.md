@@ -81,6 +81,12 @@ python app.py
 
 Open `http://127.0.0.1:5000` in your browser.
 
+## Dashboard Preview
+
+![SpendWise Dashboard](screenshots/dashboard.png)
+
+*SpendWise dashboard showing personal expense analytics and transaction summaries.*
+
 ## Learning Outcomes
 
 This project demonstrates practical use of Python, Flask routing, database operations, data analysis, chart generation, CSV export, and Git-based version control.
