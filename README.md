@@ -9,13 +9,13 @@ SpendWise is a Python-based web application that helps users record, organize, a
 - **Category filtering:** Filter transactions by category.
 - **Data visualization:** View expense analytics through charts.
 - **CSV export:** Export transaction data for further analysis.
-- **Database storage:** Store transactions using SQLite by default.
+- **Database storage:** SQLite for local development, with PostgreSQL support for deployment.
 
 ## Technology Stack
 
 - **Language:** Python
 - **Web framework:** Flask
-- **Database:** SQLite
+- **Database:** SQLite, PostgreSQL
 - **Data analysis:** Pandas
 - **Charts:** Matplotlib
 - **Frontend:** HTML and CSS
@@ -97,7 +97,7 @@ This project demonstrates practical use of Python, Flask routing, database opera
 - Add monthly budgets and spending limits.
 - Add date-range analytics and reports.
 - Improve mobile responsiveness.
-- Deploy the application to a public hosting platform.
+- Add automated tests and improve error handling.
 
 ## Author
 
