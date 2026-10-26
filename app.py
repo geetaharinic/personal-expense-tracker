@@ -13,7 +13,18 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "change-this-secret")
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///expenses.db")
+database_url = os.getenv("DATABASE_URL", "sqlite:///expenses.db")
+
+if database_url.startswith("postgres://"):
+    database_url = database_url.replace(
+        "postgres://", "postgresql+psycopg://", 1
+    )
+elif database_url.startswith("postgresql://"):
+    database_url = database_url.replace(
+        "postgresql://", "postgresql+psycopg://", 1
+    )
+
+app.config["SQLALCHEMY_DATABASE_URI"] = database_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 CATEGORIES = ["Food", "Transport", "Education", "Shopping", "Bills", "Health", "Entertainment", "Other"]
